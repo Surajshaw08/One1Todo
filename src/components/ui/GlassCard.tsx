@@ -10,7 +10,7 @@ interface GlassCardProps {
 export function GlassCard({ children, className, glow = false }: GlassCardProps) {
     return (
         <div className={cn(
-            "glass rounded-2xl p-6 transition-all duration-300",
+            "glass rounded-2xl p-4 md:p-6 transition-all duration-300",
             glow && "glow-border",
             className
         )}>

@@ -73,14 +73,14 @@ function TodoAppContent() {
   }
 
   return (
-    <main className="min-h-screen bg-ai-navy relative overflow-hidden pb-20">
-      {/* Background Blobs */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-ai-purple/20 blur-[120px] rounded-full animate-ai-float" />
-      <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] bg-ai-cyan/10 blur-[100px] rounded-full animate-ai-float" style={{ animationDelay: '-2s' }} />
+    <main className="min-h-dvh bg-ai-navy relative overflow-hidden pb-20">
+      {/* Background Blobs - Fixed for smoother performance */}
+      <div className="fixed top-[-10%] left-[-10%] w-[60%] h-[40%] bg-ai-purple/20 blur-[120px] rounded-full animate-ai-float pointer-events-none" />
+      <div className="fixed bottom-[10%] right-[-10%] w-[50%] h-[30%] bg-ai-cyan/10 blur-[100px] rounded-full animate-ai-float pointer-events-none" style={{ animationDelay: '-2s' }} />
 
-      <div className="max-w-4xl mx-auto px-6 pt-12 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 md:px-6 pt-8 md:pt-12 relative z-10">
         {/* Header */}
-        <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+        <header className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-8 md:mb-12">
           <div className="flex items-center gap-4">
             <div className="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-ai-purple/30 group">
               <Image

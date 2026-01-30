@@ -10,6 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "One1 Todo | Futuristic Task Management",
   description: "Manage your tasks with efficiency. One1 Todo is your minimalist, AI-styled task partner.",
+  themeColor: "#03030b",
 };
 
 export const viewport = {
