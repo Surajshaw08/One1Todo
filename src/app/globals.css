@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #03030b;
+  --background: #000000;
   --foreground: #ffffff;
   --ai-purple: #8b5cf6;
   --ai-cyan: #06b6d4;
-  --ai-card: rgba(15, 15, 30, 0.6);
+  --ai-card: rgba(20, 20, 20, 0.7);
   --ai-border: rgba(255, 255, 255, 0.1);
 }
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-ai-navy: #03030b;
+  --color-ai-navy: #000000;
   --color-ai-card: var(--ai-card);
   --color-ai-purple: var(--ai-purple);
   --color-ai-cyan: var(--ai-cyan);
@@ -20,7 +20,7 @@
 
 html,
 body {
-  background: #03030b;
+  background: #000000;
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -34,7 +34,7 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--ai-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.8);
 }
 
 /* Glowing Border Effect */
@@ -50,12 +50,12 @@ body {
   background: linear-gradient(45deg, var(--ai-purple), transparent, var(--ai-cyan));
   border-radius: inherit;
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.2;
   transition: opacity 0.3s ease;
 }
 
 .glow-border:hover::before {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 /* Custom Scrollbar */
@@ -64,16 +64,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #03030b;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e1e30;
+  background: #1a1a1a;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ai-purple);
+  background: #333333;
 }
 
 @keyframes float {
