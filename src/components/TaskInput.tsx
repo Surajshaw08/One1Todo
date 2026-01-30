@@ -30,7 +30,7 @@ export function TaskInput({ onAdd }: TaskInputProps) {
                         onChange={(e) => setText(e.target.value)}
                         placeholder="Add a new task..."
                         className={cn(
-                            "w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 pr-12 lg:pr-32",
+                            "w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 pr-12",
                             "text-white placeholder:text-white/20 focus:outline-none focus:ring-2 focus:ring-ai-purple/50 focus:border-ai-purple/50",
                             "transition-all duration-300 backdrop-blur-sm"
                         )}
@@ -46,7 +46,7 @@ export function TaskInput({ onAdd }: TaskInputProps) {
                     </div>
                 </div>
 
-                <div className="flex gap-2 justify-center lg:justify-start">
+                <div className="flex gap-2 justify-center">
                     {(['low', 'medium', 'high'] as const).map((p) => (
                         <button
                             key={p}

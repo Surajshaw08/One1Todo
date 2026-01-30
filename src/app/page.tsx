@@ -80,9 +80,9 @@ function TodoAppContent() {
 
       <div className="max-w-4xl mx-auto px-4 md:px-6 pt-8 md:pt-12 relative z-10">
         {/* Header */}
-        <header className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-8 md:mb-12">
-          <div className="flex items-center gap-4">
-            <div className="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-ai-purple/30 group">
+        <header className="flex flex-col items-center text-center gap-8 mb-12">
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative w-16 h-16 rounded-2xl overflow-hidden shadow-xl shadow-ai-purple/30 group">
               <Image
                 src="/logo.png"
                 alt="One1 Todo Logo"
@@ -91,7 +91,7 @@ function TodoAppContent() {
               />
             </div>
             <div>
-              <h1 className="text-3xl font-black tracking-tighter bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/40">
+              <h1 className="text-4xl font-black tracking-tighter bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/40">
                 One1 Todo
               </h1>
             </div>

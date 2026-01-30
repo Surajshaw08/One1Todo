@@ -60,7 +60,7 @@ export function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
 
                 <button
                     onClick={() => onDelete(task.id)}
-                    className="lg:opacity-0 lg:group-hover:opacity-100 p-2 text-rose-500/70 hover:text-rose-500 hover:bg-rose-500/10 rounded-lg transition-all"
+                    className="p-2 text-rose-500/40 hover:text-rose-500 hover:bg-rose-500/10 rounded-lg transition-all"
                 >
                     <Trash2 className="w-5 h-5" />
                 </button>
