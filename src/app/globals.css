@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  --background: #03030b;
+  --foreground: #ffffff;
+  --ai-purple: #8b5cf6;
+  --ai-cyan: #06b6d4;
+  --ai-card: rgba(15, 15, 30, 0.6);
+  --ai-border: rgba(255, 255, 255, 0.1);
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-ai-navy: #03030b;
+  --color-ai-card: var(--ai-card);
+  --color-ai-purple: var(--ai-purple);
+  --color-ai-cyan: var(--ai-cyan);
+  --color-ai-border: var(--ai-border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle AI Scanline Effect */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 100;
+  background-size: 100% 4px, 4px 100%;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+/* AI Glassmorphism Utility */
+.glass {
+  background: var(--ai-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--ai-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* Glowing Border Effect */
+.glow-border {
+  position: relative;
+  border-radius: inherit;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, var(--ai-purple), transparent, var(--ai-cyan));
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #03030b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e30;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ai-purple);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-ai-float {
+  animation: float 6s ease-in-out infinite;
+}
