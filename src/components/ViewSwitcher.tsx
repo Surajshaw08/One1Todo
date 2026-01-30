@@ -16,7 +16,7 @@ const views: { id: ViewType; label: string }[] = [
 
 export function ViewSwitcher({ currentView, onViewChange }: ViewSwitcherProps) {
     return (
-        <div className="flex p-1 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 w-full max-w-sm mx-auto">
+        <div className="flex p-1 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 w-full max-w-sm mx-0">
             {views.map((view) => (
                 <button
                     key={view.id}

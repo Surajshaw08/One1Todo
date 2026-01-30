@@ -79,10 +79,10 @@ function TodoAppContent() {
       <div className="fixed bottom-[10%] right-[-10%] w-[50%] h-[30%] bg-ai-cyan/10 blur-[100px] rounded-full animate-ai-float pointer-events-none" style={{ animationDelay: '-2s' }} />
 
       <div className="max-w-4xl mx-auto px-4 md:px-6 pt-8 md:pt-12 relative z-10">
-        {/* Header */}
-        <header className="flex flex-col items-center text-center gap-8 mb-12">
-          <div className="flex flex-col items-center gap-4">
-            <div className="relative w-16 h-16 rounded-2xl overflow-hidden shadow-xl shadow-ai-purple/30 group">
+        {/* Header - Unified Desktop Design Made Responsive */}
+        <header className="flex items-center justify-between gap-6 mb-12 flex-wrap">
+          <div className="flex items-center gap-4">
+            <div className="relative w-14 h-14 rounded-2xl overflow-hidden shadow-lg shadow-ai-purple/30 group shrink-0">
               <Image
                 src="/logo.png"
                 alt="One1 Todo Logo"
@@ -90,11 +90,9 @@ function TodoAppContent() {
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <div>
-              <h1 className="text-4xl font-black tracking-tighter bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/40">
-                One1 Todo
-              </h1>
-            </div>
+            <h1 className="text-3xl font-black tracking-tighter bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/40">
+              One1 Todo
+            </h1>
           </div>
           <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
         </header>

@@ -46,7 +46,7 @@ export function TaskInput({ onAdd }: TaskInputProps) {
                     </div>
                 </div>
 
-                <div className="flex gap-2 justify-center">
+                <div className="flex gap-2 justify-start">
                     {(['low', 'medium', 'high'] as const).map((p) => (
                         <button
                             key={p}
